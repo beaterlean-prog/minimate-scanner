@@ -7,7 +7,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#101828;font-family:Anuphan,system-ui,sans-serif}.app{max-width:720px;margin:auto;min-height:100vh;background:#fff}.head{padding:16px 18px;border-bottom:1px solid #e7edf5;display:flex;justify-content:space-between;align-items:center}.brand strong{display:block;font-size:18px}.brand small{color:#667085}.close{border:0;background:#eef3f9;border-radius:12px;width:42px;height:42px;font-size:20px}.camera{background:#101828;padding:12px}.reader{position:relative;width:100%;height:150px;min-height:150px;border-radius:14px;overflow:hidden;background:#101828}.reader video{width:100%!important;height:150px!important;object-fit:cover!important}.scanline{position:absolute;left:18px;right:18px;top:50%;height:2px;transform:translateY(-50%);background:#ef4444;border-radius:999px;box-shadow:0 0 7px rgba(239,68,68,.75);z-index:20;pointer-events:none}.camera-switch{display:block;margin:8px auto 0;border:1px solid #344054;background:#fff;color:#101828;border-radius:10px;padding:7px 12px;font:600 12px Anuphan,system-ui,sans-serif}.camera-switch[hidden]{display:none}.status{padding:10px 14px;background:#fff4e8;color:#b54708;font-size:13px}.status.ok{background:#ecfdf3;color:#027a48}.status.err{background:#fef3f2;color:#b42318}.latest{padding:14px 18px;border-bottom:1px solid #e7edf5}.latest small{color:#667085}.latest strong{display:block;font-size:18px;margin-top:3px}.items{padding:8px 18px 110px}.row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #eef2f6}.row small{display:block;color:#667085}.price{font-weight:700;white-space:nowrap}.empty{text-align:center;color:#98a2b3;padding:26px}.total{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #dfe6ee;padding:12px 18px}.totalin{max-width:684px;margin:auto;display:flex;justify-content:space-between;align-items:end}.total small{color:#667085}.total b{font-size:26px}.qty{font-weight:600}.hint{font-size:12px;color:#667085;margin-top:3px}.non-sale .items{display:none}.non-sale .total{display:none}.non-sale .latest{min-height:130px}
-.cartctl{display:flex;align-items:center;gap:7px}.cartctl button{width:34px;height:34px;border:1px solid #d0d5dd;background:#fff;border-radius:10px;font-size:20px}.cartctl b{min-width:20px;text-align:center}.items{padding:6px 12px 98px}.row{align-items:center;padding:9px 0}.total{padding:9px 10px}.totalin{max-width:700px;align-items:center;gap:9px}.paybtn{border:0;background:#101828;color:#fff;border-radius:12px;padding:11px 14px;font-weight:700}.paybtn:disabled{opacity:.4}.paypanel{position:fixed;inset:0;background:rgba(16,24,40,.45);z-index:50;display:grid;place-items:end center;padding:10px}.paypanel[hidden]{display:none}.paycard{width:min(100%,700px);background:#fff;border-radius:18px;padding:15px;max-height:92vh;overflow:auto}.payhead{display:flex;justify-content:space-between;align-items:center}.paytabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.paytabs button{padding:11px;border:1px solid #d0d5dd;background:#fff;border-radius:12px;font-weight:700}.paytabs button.active{background:#101828;color:#fff}.cashinput{width:100%;font:700 27px Anuphan,sans-serif;padding:9px 11px;border:1px solid #d0d5dd;border-radius:12px}.payactions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}.payactions button{padding:12px;border:0;border-radius:12px;font-weight:700}.cancelpay{background:#eef2f6}.confirmpay{background:#101828;color:#fff}.qrbox{display:flex;justify-content:center;margin:10px 0}.change{font-size:18px;font-weight:700;margin-top:7px}html,body{height:100%;overflow:hidden}body{overscroll-behavior:none}.app{height:100dvh;min-height:0;display:flex;flex-direction:column;overflow:hidden}.head,.camera,.status{flex:0 0 auto}.scan-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:#fff}.scan-scroll .items{padding-bottom:18px}.total{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;flex:0 0 auto;z-index:30}</style>
+.cartctl{display:flex;align-items:center;gap:7px}.cartctl button{width:34px;height:34px;border:1px solid #d0d5dd;background:#fff;border-radius:10px;font-size:20px}.cartctl b{min-width:20px;text-align:center}.items{padding:6px 12px 98px}.row{align-items:center;padding:9px 0}.total{padding:9px 10px}.totalin{max-width:700px;align-items:center;gap:9px}.paybtn{border:0;background:#101828;color:#fff;border-radius:12px;padding:11px 14px;font-weight:700}.paybtn:disabled{opacity:.4}.paypanel{position:fixed;inset:0;background:rgba(16,24,40,.45);z-index:50;display:grid;place-items:end center;padding:10px}.paypanel[hidden]{display:none}.paycard{width:min(100%,700px);background:#fff;border-radius:18px;padding:15px;max-height:92vh;overflow:auto}.payhead{display:flex;justify-content:space-between;align-items:center}.paytabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.paytabs button{padding:11px;border:1px solid #d0d5dd;background:#fff;border-radius:12px;font-weight:700}.paytabs button.active{background:#101828;color:#fff}.cashinput{width:100%;font:700 27px Anuphan,sans-serif;padding:9px 11px;border:1px solid #d0d5dd;border-radius:12px}.payactions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}.payactions button{padding:12px;border:0;border-radius:12px;font-weight:700}.cancelpay{background:#eef2f6}.confirmpay{background:#101828;color:#fff}.qrbox{display:flex;justify-content:center;margin:10px 0}.change{font-size:18px;font-weight:700;margin-top:7px}html,body{height:100%;overflow:hidden}body{overscroll-behavior:none}.app{height:100dvh;min-height:0;display:flex;flex-direction:column;overflow:hidden}.head,.camera,.status{flex:0 0 auto}.scan-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:#fff}.scan-scroll .items{padding-bottom:18px}.total{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;flex:0 0 auto;z-index:30}
+/* === MiniMate Scanner payment polish === */
+.paybtn{background:#16a34a;color:#fff;box-shadow:0 5px 14px rgba(22,163,74,.18)}
+.paybtn:active{transform:translateY(1px)}
+.cartctl button[data-delta="1"]{background:#ecfdf3;border-color:#86efac;color:#15803d;font-weight:800}
+.cartctl button[data-delta="-1"]{background:#fff7ed;border-color:#fdba74;color:#c2410c;font-weight:800}
+.paytabs #payTransfer.active{background:#2563eb;border-color:#2563eb;color:#fff}
+.paytabs #payCash.active{background:#16a34a;border-color:#16a34a;color:#fff}
+.cancelpay{background:#f1f5f9!important;color:#475569}
+.confirmpay{background:#16a34a!important;color:#fff;box-shadow:0 5px 14px rgba(22,163,74,.16)}
+.cash-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:10px 0}
+.cash-stat{border:1.5px solid #e2e8f0;border-radius:12px;padding:8px;text-align:center;background:#fff}
+.cash-stat small{display:block;color:#64748b;font-size:11px}
+.cash-stat b{display:block;font-size:16px;margin-top:2px}
+.cash-stat.due{border-color:#93c5fd;background:#eff6ff}.cash-stat.due b{color:#1d4ed8}
+.cash-stat.received{border-color:#fcd34d;background:#fffbeb}.cash-stat.received b{color:#b45309}
+.cash-stat.change.ok{border-color:#86efac;background:#f0fdf4}.cash-stat.change.ok b{color:#15803d}
+.cash-stat.change.wait{border-color:#fca5a5;background:#fef2f2}.cash-stat.change.wait b{color:#b91c1c}
+.cash-keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px}
+.cash-keypad button{min-height:44px;border:1px solid #dbe3ec;background:#fff;border-radius:11px;font-weight:800;font-size:15px}
+.cash-keypad button:active{background:#f1f5f9}
+.cash-keypad .quick{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
+.cash-keypad .exact{background:#ecfdf3;border-color:#a7f3d0;color:#047857}
+.cash-keypad .clear{background:#fff1f2;border-color:#fecdd3;color:#be123c}
+.cashinput.cash-ok{border-color:#22c55e!important;box-shadow:0 0 0 3px rgba(34,197,94,.10)}
+.cashinput.cash-wait{border-color:#ef4444!important;box-shadow:0 0 0 3px rgba(239,68,68,.08)}
+.saving-mask{position:fixed;inset:0;z-index:100;background:rgba(15,23,42,.78);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:24px}
+.saving-mask[hidden]{display:none}
+.saving-card{width:min(88vw,330px);background:#fff;border-radius:22px;padding:25px 20px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.saving-spinner{width:46px;height:46px;border:4px solid #dbeafe;border-top-color:#2563eb;border-radius:50%;margin:0 auto 14px;animation:mmspin .8s linear infinite}
+.saving-card strong{display:block;font-size:20px}.saving-card small{display:block;color:#64748b;margin-top:5px}
+@keyframes mmspin{to{transform:rotate(360deg)}}
+.success-mask{position:fixed;inset:0;z-index:101;background:rgba(15,23,42,.82);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:24px}
+.success-mask[hidden]{display:none}
+.success-card{width:min(88vw,330px);background:#fff;border-radius:22px;padding:27px 20px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.30)}
+.success-icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;margin:0 auto 13px;background:#dcfce7;color:#15803d;font-size:34px;font-weight:900}
+.success-card strong{display:block;font-size:22px;color:#166534}.success-card small{display:block;color:#64748b;margin-top:5px}
+</style>
 </head>
 <body>
 <div id="app" class="app">
@@ -17,10 +54,26 @@
   <div class="scan-scroll"><div class="latest"><small>สแกนล่าสุด</small><strong id="latest">—</strong><div id="latestHint" class="hint">หันกล้องไปที่บาร์โค้ดสินค้า</div></div>
   <div id="items" class="items"><div class="empty">ยังไม่มีสินค้าในรายการ</div></div></div>
   <div class="total"><div class="totalin"><div><small>จำนวน</small><div id="qty" class="qty">0 ชิ้น</div></div><div style="text-align:right"><small>รวม</small><div><b id="total">฿0</b></div></div><button id="payBtn" class="paybtn" type="button" disabled>รับเงิน</button></div></div>
-<div id="payPanel" class="paypanel" hidden><div class="paycard"><div class="payhead"><div><small>ยอดชำระ</small><div><b id="payAmount" style="font-size:28px">฿0</b></div></div><button class="close" type="button" id="payClose">×</button></div><div class="paytabs"><button id="payTransfer" class="active" type="button">PromptPay</button><button id="payCash" type="button">เงินสด</button></div><div id="transferBox"><div id="qrBox" class="qrbox"></div><div id="qrHint" class="hint" style="text-align:center">สแกน QR แล้วกดยืนยันการขาย</div></div><div id="cashBox" hidden><label>รับเงิน</label><input id="cashReceived" class="cashinput" type="number" inputmode="decimal" min="0"><div id="cashChange" class="change">เงินทอน ฿0</div></div><div class="payactions"><button id="payCancel" class="cancelpay" type="button">ยกเลิก</button><button id="payConfirm" class="confirmpay" type="button">ยืนยันการขาย</button></div></div></div>
+<div id="payPanel" class="paypanel" hidden><div class="paycard"><div class="payhead"><div><small>ยอดชำระ</small><div><b id="payAmount" style="font-size:28px">฿0</b></div></div><button class="close" type="button" id="payClose">×</button></div><div class="paytabs"><button id="payTransfer" class="active" type="button">PromptPay</button><button id="payCash" type="button">เงินสด</button></div><div id="transferBox"><div id="qrBox" class="qrbox"></div><div id="qrHint" class="hint" style="text-align:center">สแกน QR แล้วกดยืนยันการขาย</div></div><div id="cashBox" hidden>
+<div class="cash-summary">
+  <div class="cash-stat due"><small>ยอดเต็ม</small><b id="cashDue">฿0</b></div>
+  <div class="cash-stat received" id="cashReceivedStat"><small>จ่ายมา</small><b id="cashReceivedShow">฿0</b></div>
+  <div class="cash-stat change wait" id="cashChangeStat"><small>เงินทอน</small><b id="cashChange">฿0</b></div>
+</div>
+<label>รับเงิน</label><input id="cashReceived" class="cashinput" type="number" inputmode="decimal" min="0">
+<div class="cash-keypad">
+  <button type="button" class="quick" data-cash-add="100">+100</button>
+  <button type="button" class="quick" data-cash-add="500">+500</button>
+  <button type="button" class="quick" data-cash-add="1000">+1,000</button>
+  <button type="button" class="exact" id="cashExact">ยอดพอดี</button>
+  <button type="button" class="clear" id="cashClear">ลบทั้งหมด</button>
+</div>
+</div><div class="payactions"><button id="payCancel" class="cancelpay" type="button">ยกเลิก</button><button id="payConfirm" class="confirmpay" type="button">ยืนยันการขาย</button></div></div></div>
 </div>
 <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<div id="savingMask" class="saving-mask" hidden><div class="saving-card"><div class="saving-spinner"></div><strong>กำลังบันทึกการขาย</strong><small>กรุณารอสักครู่ ระบบกำลังบันทึกข้อมูล</small></div></div>
+<div id="successMask" class="success-mask" hidden><div class="success-card"><div class="success-icon">✓</div><strong>ขายสำเร็จ</strong><small id="successSaleId">บันทึกรายการเรียบร้อยแล้ว</small></div></div>
 <script>
 (function(){
   const qs=new URLSearchParams(location.search),channel=qs.get('channel')||'',target=qs.get('target')||'trade',openerOrigin=qs.get('openerOrigin')||'';
@@ -39,8 +92,11 @@
   function showCheckout(d){checkoutData=d||{};const amount=Number(checkoutData.amount||0);document.getElementById('payAmount').textContent=money(amount,currentCart.currency);document.getElementById('cashReceived').value=amount;setPayMethod('TRANSFER');const q=document.getElementById('qrBox');q.innerHTML='';if(checkoutData.promptpayPayload&&window.QRCode)new QRCode(q,{text:checkoutData.promptpayPayload,width:190,height:190});document.getElementById('qrHint').textContent=checkoutData.promptpayReady?'สแกน QR แล้วกดยืนยันการขาย':'ยังไม่ได้ตั้งค่า PromptPay';document.getElementById('payPanel').hidden=false}
   function closePay(){document.getElementById('payPanel').hidden=true}
   function setPayMethod(m){payMethod=m==='CASH'?'CASH':'TRANSFER';document.getElementById('payTransfer').classList.toggle('active',payMethod==='TRANSFER');document.getElementById('payCash').classList.toggle('active',payMethod==='CASH');document.getElementById('transferBox').hidden=payMethod!=='TRANSFER';document.getElementById('cashBox').hidden=payMethod!=='CASH';updateChange()}
-  function updateChange(){const a=Number(checkoutData&&checkoutData.amount||0),r=Number(document.getElementById('cashReceived').value||0);document.getElementById('cashChange').textContent='เงินทอน '+money(Math.max(0,r-a),currentCart.currency)}
-  function confirmPay(){const a=Number(checkoutData&&checkoutData.amount||0),r=payMethod==='CASH'?Number(document.getElementById('cashReceived').value||0):a;if(payMethod==='CASH'&&r<a){status('ยอดเงินสดที่รับยังไม่ครบ','err');return}document.getElementById('payConfirm').disabled=true;post('sale-confirm',{method:payMethod,received:r})}
+  function updateChange(){const a=Number(checkoutData&&checkoutData.amount||0),r=Number(document.getElementById('cashReceived').value||0),ok=r>=a,cur=currentCart.currency;document.getElementById('cashDue').textContent=money(a,cur);document.getElementById('cashReceivedShow').textContent=money(r,cur);document.getElementById('cashChange').textContent=money(Math.max(0,r-a),cur);document.getElementById('cashReceived').classList.toggle('cash-ok',ok);document.getElementById('cashReceived').classList.toggle('cash-wait',!ok);const c=document.getElementById('cashChangeStat');c.classList.toggle('ok',ok);c.classList.toggle('wait',!ok)}
+  function showSaving(){document.getElementById('savingMask').hidden=false}
+  function hideSaving(){document.getElementById('savingMask').hidden=true}
+  function showSaleSuccess(id){hideSaving();closePay();const m=document.getElementById('successMask');document.getElementById('successSaleId').textContent=id?'เลขที่รายการ '+id:'บันทึกรายการเรียบร้อยแล้ว';m.hidden=false;setTimeout(function(){m.hidden=true},1500)}
+  function confirmPay(){const a=Number(checkoutData&&checkoutData.amount||0),r=payMethod==='CASH'?Number(document.getElementById('cashReceived').value||0):a;if(payMethod==='CASH'&&r<a){status('ยอดเงินสดยังไม่ครบ','err');return}document.getElementById('payConfirm').disabled=true;showSaving();post('sale-confirm',{method:payMethod,received:r})}
   function onDecoded(raw){const code=String(raw||'').trim().replace(/\s+/g,'');if(!code)return;const now=Date.now();if(code===lastCode&&(now-lastSeen)<HOLD){lastSeen=now;return}lastCode=code;lastSeen=now;document.getElementById('latest').textContent=code;document.getElementById('latestHint').textContent='กำลังตรวจสอบสินค้า...';post('scan',{code:code})}
     function cameraCandidates_(cams){const rear=(cams||[]).filter(c=>/back|rear|environment|หลัง|camera\s*[2-9]/i.test(c.label||''));return rear.length?rear:(cams||[])}
   function savedCameraIndex_(){try{const id=localStorage.getItem(CAMERA_KEY),i=cameras.findIndex(c=>c.id===id);return i>=0?i:0}catch(e){return 0}}
@@ -60,7 +116,7 @@ async function start(){
     }catch(e){status('เปิดกล้องไม่สำเร็จ: '+(e&&e.message?e.message:String(e)),'err');post('error',{message:String(e&&e.message||e)})}
   }
   document.getElementById('switchCamera').addEventListener('click',switchCamera_);
-  window.addEventListener('message',function(e){const d=e.data||{};if(e.source!==window.opener||e.origin!==openerOrigin||d.source!=='minimate-pos'||d.channel!==channel)return;if(d.type==='cart'){renderCart(d.cart);status('พร้อมสแกน','ok');}if(d.type==='command-ack'){if(d.command==='cart-change')status('อัปเดตรายการแล้ว','ok');}if(d.type==='checkout-data')showCheckout(d.checkout);if(d.type==='sale-processing')status('กำลังบันทึกการขาย...');if(d.type==='sale-success'){closePay();document.getElementById('payConfirm').disabled=false;renderCart(d.cart);status('ขายสำเร็จ'+(d.saleId?' · '+d.saleId:''),'ok');beep(true)}if(d.type==='sale-error'){document.getElementById('payConfirm').disabled=false;status(d.message||'บันทึกการขายไม่สำเร็จ','err');renderCart(d.cart);}if(d.type==='scan-result'){beep(!!d.ok);document.getElementById('latest').textContent=d.name||d.code||'—';document.getElementById('latestHint').textContent=d.ok?((target==='trade'?money(d.price,d.currency)+' · ':'')+(d.message||'สแกนสำเร็จ')):(d.message||'ไม่พบสินค้า');status(d.ok?'สแกนสำเร็จ':'สแกนไม่สำเร็จ',d.ok?'ok':'err');renderCart(d.cart)}});
+  window.addEventListener('message',function(e){const d=e.data||{};if(e.source!==window.opener||e.origin!==openerOrigin||d.source!=='minimate-pos'||d.channel!==channel)return;if(d.type==='cart'){renderCart(d.cart);status('พร้อมสแกน','ok');}if(d.type==='command-ack'){if(d.command==='cart-change')status('อัปเดตรายการแล้ว','ok');}if(d.type==='checkout-data')showCheckout(d.checkout);if(d.type==='sale-processing'){showSaving();status('กำลังบันทึกการขาย...');}if(d.type==='sale-success'){document.getElementById('payConfirm').disabled=false;renderCart(d.cart);status('ขายสำเร็จ','ok');beep(true);showSaleSuccess(d.saleId)}if(d.type==='sale-error'){hideSaving();document.getElementById('payConfirm').disabled=false;status(d.message||'บันทึกการขายไม่สำเร็จ','err');renderCart(d.cart);}if(d.type==='scan-result'){beep(!!d.ok);document.getElementById('latest').textContent=d.name||d.code||'—';document.getElementById('latestHint').textContent=d.ok?((target==='trade'?money(d.price,d.currency)+' · ':'')+(d.message||'สแกนสำเร็จ')):(d.message||'ไม่พบสินค้า');status(d.ok?'สแกนสำเร็จ':'สแกนไม่สำเร็จ',d.ok?'ok':'err');renderCart(d.cart)}});
   document.getElementById('items').addEventListener('click',function(e){const b=e.target.closest('button[data-cart-code]');if(b){status('กำลังอัปเดตรายการ...');post('cart-change',{code:b.dataset.cartCode,delta:Number(b.dataset.delta||0)})}});
   document.getElementById('payBtn').addEventListener('click',openPay);
   document.getElementById('payClose').addEventListener('click',closePay);
@@ -69,6 +125,10 @@ async function start(){
   document.getElementById('payCash').addEventListener('click',function(){setPayMethod('CASH')});
   document.getElementById('cashReceived').addEventListener('input',updateChange);
   document.getElementById('payConfirm').addEventListener('click',confirmPay);
+  document.querySelectorAll('[data-cash-add]').forEach(function(b){b.addEventListener('click',function(){const i=document.getElementById('cashReceived');i.value=Number(i.value||0)+Number(b.dataset.cashAdd||0);updateChange()})});
+  document.getElementById('cashExact').addEventListener('click',function(){document.getElementById('cashReceived').value=Number(checkoutData&&checkoutData.amount||0);updateChange()});
+  document.getElementById('cashClear').addEventListener('click',function(){document.getElementById('cashReceived').value='';updateChange()});
+
   window.addEventListener('beforeunload',function(){try{scanner&&scanner.isScanning&&scanner.stop()}catch(e){}post('closed')});
   post('loaded');start();
 })();
