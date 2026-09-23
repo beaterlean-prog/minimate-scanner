@@ -44,6 +44,11 @@
 .success-card{width:min(88vw,330px);background:#fff;border-radius:22px;padding:27px 20px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.30)}
 .success-icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;margin:0 auto 13px;background:#dcfce7;color:#15803d;font-size:34px;font-weight:900}
 .success-card strong{display:block;font-size:22px;color:#166534}.success-card small{display:block;color:#64748b;margin-top:5px}
+
+.cash-summary{align-items:stretch}
+.cash-stat{min-height:66px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}
+.cash-stat small{line-height:1.25;min-height:14px}
+.cash-stat b{line-height:1.25;min-height:20px}
 </style>
 </head>
 <body>
@@ -95,7 +100,7 @@
   function updateChange(){const a=Number(checkoutData&&checkoutData.amount||0),r=Number(document.getElementById('cashReceived').value||0),ok=r>=a,cur=currentCart.currency;document.getElementById('cashDue').textContent=money(a,cur);document.getElementById('cashReceivedShow').textContent=money(r,cur);document.getElementById('cashChange').textContent=money(Math.max(0,r-a),cur);document.getElementById('cashReceived').classList.toggle('cash-ok',ok);document.getElementById('cashReceived').classList.toggle('cash-wait',!ok);const c=document.getElementById('cashChangeStat');c.classList.toggle('ok',ok);c.classList.toggle('wait',!ok)}
   function showSaving(){document.getElementById('savingMask').hidden=false}
   function hideSaving(){document.getElementById('savingMask').hidden=true}
-  function showSaleSuccess(id){hideSaving();closePay();const m=document.getElementById('successMask');document.getElementById('successSaleId').textContent=id?'เลขที่รายการ '+id:'บันทึกรายการเรียบร้อยแล้ว';m.hidden=false;setTimeout(function(){m.hidden=true},1500)}
+  function showSaleSuccess(id){hideSaving();closePay();const m=document.getElementById('successMask');document.getElementById('successSaleId').textContent=id?'เลขที่รายการ '+id:'บันทึกรายการเรียบร้อยแล้ว';m.hidden=false;setTimeout(function(){try{window.close()}catch(e){}},1200)}
   function confirmPay(){const a=Number(checkoutData&&checkoutData.amount||0),r=payMethod==='CASH'?Number(document.getElementById('cashReceived').value||0):a;if(payMethod==='CASH'&&r<a){status('ยอดเงินสดยังไม่ครบ','err');return}document.getElementById('payConfirm').disabled=true;showSaving();post('sale-confirm',{method:payMethod,received:r})}
   function onDecoded(raw){const code=String(raw||'').trim().replace(/\s+/g,'');if(!code)return;const now=Date.now();if(code===lastCode&&(now-lastSeen)<HOLD){lastSeen=now;return}lastCode=code;lastSeen=now;document.getElementById('latest').textContent=code;document.getElementById('latestHint').textContent='กำลังตรวจสอบสินค้า...';post('scan',{code:code})}
     function cameraCandidates_(cams){const rear=(cams||[]).filter(c=>/back|rear|environment|หลัง|camera\s*[2-9]/i.test(c.label||''));return rear.length?rear:(cams||[])}
