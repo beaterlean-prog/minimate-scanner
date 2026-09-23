@@ -55,14 +55,6 @@
       if(!document.querySelector('#reader .scanline')){
         const line=document.createElement('div');line.className='scanline';line.setAttribute('aria-hidden','true');document.getElementById('reader').appendChild(line);
       }
-      // ไม่ใช้ zoom: ขอ continuous autofocus เฉพาะอุปกรณ์ที่รองรับ
-      try{
-        const caps=scanner.getRunningTrackCapabilities?scanner.getRunningTrackCapabilities():null;
-        const settings=scanner.getRunningTrackSettings?scanner.getRunningTrackSettings():null;
-        if(caps&&Array.isArray(caps.focusMode)&&caps.focusMode.indexOf('continuous')!==-1&&(!settings||settings.focusMode!=='continuous')){
-          await scanner.applyVideoConstraints({advanced:[{focusMode:'continuous'}]});
-        }
-      }catch(_){}
       status('พร้อมสแกน · วางบาร์โค้ดใกล้เส้นสีแดงและเว้นระยะเล็กน้อย','ok');post('ready');
     }catch(e){status('เปิดกล้องไม่สำเร็จ: '+(e&&e.message?e.message:String(e)),'err');post('error',{message:String(e&&e.message||e)})}
   }
